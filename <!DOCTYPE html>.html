@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PRACTICE QUESTIONS</title>  
+<style>
+body{ background-color: black;} h2 {font-style: italic;color: darkgoldenrod;}p{color:darkorange;font-size:x-large;}
+</style>  
+</head>    
+<body>
+    <p id="output"></p>
+<script>
+    let n=15;
+    let o="";
+    o+="<h2>1.The FizzBuzz Classic</h2>";
+    if(n%3==0&&n%5==0)
+{
+    o+="FizzBuzz";
+}
+else if(n%3==0)
+{
+    o+="Fizz";
+}
+else if(n%5==0)
+{
+    o+="Buzz";
+}
+else
+{
+    o+=n;
+}
+o+="<h2>2.The Multiples Collector</h2>";
+let sum=0;
+for(let i=1;i<=50;i++)
+{
+    if(i%4==0||i%7==0)
+{
+    sum+=i;
+}
+}
+o+=sum;
+o+="<h2>3.Smartphone Battery Monitor</h2>";
+let bp=100;
+while (true)
+{
+    o+="CURRENT BATTERY:"+bp+"%<br>";
+    if(bp<20)
+{
+    o+= bp+"%"+"..WARNING:LOW BATTERY<br>";
+}
+bp-=15;
+ if(bp<=0)
+{
+    o+="0%..SHUTTING DOWN..<br>";
+    break;
+}
+}
+document.getElementById("output").innerHTML=o;
+
+</script>    
+</body>
+</html>
+
